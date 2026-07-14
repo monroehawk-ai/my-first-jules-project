@@ -1340,7 +1340,7 @@ let TS = null;
 const undoStack = [];
 let mutationCount = 0;
 
-const API_URL = 'https://extendsclass.com/api/json-storage/bin/ccfedca';
+const API_URL = 'https://kvdb.io/T1WMn2DXT7VHrMWJvZFPR4/hometasks';
 
 // ═══════════════════════════════════════════
 // CORE LOAD, SAVE, & CACHING LOGIC (Offline First)
@@ -1437,7 +1437,7 @@ async function tSave() {
   
   try {
     const response = await fetch(API_URL, {
-      method: 'PUT',
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(TS)
     });
