@@ -12,7 +12,8 @@ exports.handler = async (event, context) => {
         path: parsedUrl.pathname,
         method: method,
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Content-Length': body ? Buffer.byteLength(body) : 0
         }
       };
 
